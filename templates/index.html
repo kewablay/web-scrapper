@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- home section starts  -->
+{% block content %}
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>a web scrapping <span>app</span></h3>
+        <p>This is an application that extract relevant information from varieties of websites providing the user with 
+            the necessary information about the search term. </p>
+        <a href="{% url 'new_search' %}" class="btn">Explore app</a>
+    </div>
+
+    <div class="image">
+        <img src="{% static 'images/home-img.png' %}" alt="phone-img">
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+</body>
+</html>
+{% endblock content %}

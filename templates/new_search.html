@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %} 
+<body>
+    <div class="background">
+
+        <section class="explore" id="explore">
+            <h1 class="heading"> Net Scrapper</h1>
+            <div class="super-box">
+                <div class="box-container">
+        
+                    <div class="box">
+                        <img src="{% static 'images/f-icon1.png' %}" alt="nice UI">
+                        <h3>amazing UI design</h3>
+                    </div>
+        
+                    <div class="box">
+                        <img src="{% static 'images/filter.png' %}" alt="filter">
+                        <h3>Filter your Searches</h3>
+                    </div>
+        
+                    <div class="box">
+                        <img src="{% static 'images/flash.png' %}" alt="speed">
+                        <h3>fast and secure</h3>
+                    </div>
+        
+                </div>
+                <div class="search-area container">
+                    <div class="search_box">
+                        <form action="#" method="POST">
+                            <input style="background: rgba(243, 243, 243, 0.74); font-size: 1.7rem; border-radius: 5px; height: 6rem; width: 80vw" type="text" class="input" placeholder="  search...">
+                            <br>
+                            <div class="btn" style="border-radius: 0;">
+                                <p>Search</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>       
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+{% endblock content %}
