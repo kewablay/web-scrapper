@@ -26,21 +26,71 @@
                     </div>
         
                 </div>
-                <div class="search-area container">
-                    <div class="search_box">
-                        <form action="#" method="POST">
-                            <input style="background: rgba(243, 243, 243, 0.74); font-size: 1.7rem; border-radius: 5px; height: 6rem; width: 80vw" type="text" class="input" placeholder="  search...">
-                            <br>
-                            <div class="btn" style="border-radius: 0;">
-                                <p>Search</p>
-                            </div>
-                        </form>
-                    </div>
+                <div class="container" id="search-area">
+                    <center>
+                        <div class="search_box">
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+                                <input id='input-box' type="text" class="input" placeholder="  search...">
+                                <div class="btn" id='input-btn'>
+                                    <p>Search</p>
+                                </div>
+                            </form>
+                        </div>
+                    </center>
                 </div>       
             </div>
-        </section>
-    </div>
-</body>
+        </div>
+    </section>    
+    
+    <!-- results display section -->
+    <h1 class="results-header"> results</h1>
+    <section class="search-results">
+        <div class="list-container">
+            <div class="card">
+                <div class="card-header">
+                <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+                </div>
+                <div class="card-body">
+                <h4>
+                    Why is the Tesla Cybertruck designed the way it
+                    is?
+                </h4>
+                <p>
+                    An exploration into the truck's polarising design
+                </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
+                </div>
+                <div class="card-body">
+                <h4>
+                    How to Keep Going When You Don’t Know What’s Next
+                </h4>
+                <p>
+                    The future can be scary, but there are ways to
+                    deal with that fear.
+                </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
+                </div>
+                <div class="card-body">
+                <h4>
+                    10 Rules of Dashboard Design
+                </h4>
+                <p>
+                    Dashboard Design Guidelines
+                </div>
+            </div>
+            
+    </section>
+    <!-- end of results display section -->
+    </body>
 </html>
 
 {% endblock content %}
