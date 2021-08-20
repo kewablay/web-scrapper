@@ -248,9 +248,10 @@ header label{
     overflow: hidden;
     width: 300px;
 }
+
 .card-header img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
 }
 .card-body {
@@ -259,7 +260,7 @@ header label{
     justify-content: center;
     align-items: flex-start;
     padding: 0 20px;
-    min-height: 100px;
+    min-height: 200px;
 }
   
 /* end of results display section */

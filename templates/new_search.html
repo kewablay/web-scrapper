@@ -47,55 +47,22 @@
     <h1 class="results-header"> {{ search }}</h1>
     <section class="search-results">
         <div class="list-container">
-            <div class="card">
-                <div class="card-header">
-                <img src="https://c0.wallpaperflare.com/preview/483/210/436/car-green-4x4-jeep.jpg" alt="rover" />
+            {% for item in final_item_list %}
+                <div class="card">
+                    <div class="card-header">
+                    <a href="{{ item.2 }}">
+                        <img src="{{ item.3 }}" alt="" />
+                    </a>
+                    </div>
+                    <div class="card-body">
+                        <a style="color: black;" href="{{ item.2 }}">
+                            <h3> {{ item.0 }} </h3>
+                        </a>
+                        <p> {{ item.1}} </p>
+                    </div>
                 </div>
-                <div class="card-body">
-                <h4>
-                    Why is the Tesla Cybertruck designed the way it
-                    is?
-                </h4>
-                <p>
-                    An exploration into the truck's polarising design
-                </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                <img src="https://www.newsbtc.com/wp-content/uploads/2020/06/mesut-kaya-LcCdl__-kO0-unsplash-scaled.jpg" alt="ballons" />
-                </div>
-                <div class="card-body">
-                <h4>
-                    How to Keep Going When You Don’t Know What’s Next
-                </h4>
-                <p>
-                    The future can be scary, but there are ways to
-                    deal with that fear.
-                </p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                <img src="https://images6.alphacoders.com/312/thumb-1920-312773.jpg" alt="city" />
-                </div>
-                <div class="card-body">
-                <h4>
-                    10 Rules of Dashboard Design
-                </h4>
-                <p>
-                    Dashboard Design Guidelines
-                </div>
-            </div>
-
-            <div class="scraped-content">
-                {% for item in final_item_list %}
-                    <h2>{{ item.0 }}</h2>
-                    <p>{{ item.1 }}</p>
-                    <p>{{ item.2 }}</p>
-                    <!-- {{ item.3 }} -->
-                {%endfor %}
-            </div>
+            {%endfor %}
+        </div>
             
     </section>
     <!-- end of results display section -->
