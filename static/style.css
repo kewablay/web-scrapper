@@ -237,12 +237,12 @@ header label{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-auto-rows: auto;
-    grid-gap: 1rem;
+    grid-gap: .05rem;
     place-self: center;
 }
 .card {
     margin: 10px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(138, 110, 110, 0.534);
     overflow: hidden;
@@ -251,7 +251,7 @@ header label{
 
 .card-header img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
 }
 .card-body {
@@ -260,9 +260,12 @@ header label{
     justify-content: center;
     align-items: flex-start;
     padding: 0 20px;
-    min-height: 200px;
+    min-height: 110px;
 }
-  
+
+.card:hover, .card-header img  {
+translate: scale(.5rem);
+}
 /* end of results display section */
 
 

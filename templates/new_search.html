@@ -50,15 +50,15 @@
             {% for item in final_item_list %}
                 <div class="card">
                     <div class="card-header">
-                    <a href="{{ item.2 }}">
+                    <a target= _blank href="{{ item.2 }}">
                         <img src="{{ item.3 }}" alt="" />
                     </a>
                     </div>
                     <div class="card-body">
-                        <a style="color: black;" href="{{ item.2 }}">
-                            <h3> {{ item.0 }} </h3>
+                        <a target= _blank style="color: black;" href="{{ item.2 }}">
+                            <h2> {{ item.0 }} </h2>
                         </a>
-                        <p> {{ item.1}} </p>
+                        <h2 style="color: green; padding-top: 10px;"> {{ item.1}} </h2>
                     </div>
                 </div>
             {%endfor %}

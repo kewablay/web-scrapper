@@ -24,7 +24,6 @@ def new_search(request):
     item_review = soup.find(class_ = 'seb-supplier-review text-ellipsis list-no-v2-decisionsup__element')
     item_url = soup.find(class_ = 'elements-title-normal one-line').get('href')
     item_image = soup.find(class_ = 'seb-img-switcher__imgs').get('data-image')
-    print(item_price)
     # for items in items_list:
     #     print(items.find(class_ = 'seb-img-switcher__imgs').get('data-image'))
 
@@ -35,7 +34,7 @@ def new_search(request):
     final_item_list = []
 
     for items in items_list:
-        item_name = items.find(class_ = 'elements-title-normal__outter').get_text()
+        item_name = items.find(class_ = 'elements-title-normal__outter').get_text()[0:30] + "..."
         item_price = items.find(class_ = 'organic-gallery-offer-section__price').find('span').get_text()    
         item_url = items.find(class_ = 'elements-title-normal one-line').get('href')
         item_image = items.find(class_ = 'seb-img-switcher__imgs').get('data-image')
